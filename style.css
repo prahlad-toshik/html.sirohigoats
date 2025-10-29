@@ -14,8 +14,10 @@ h1{
     font-family: "Times New Roman", Times, red serif;
 }
 .site-logo {
-  width: 150px;
-  height: auto;
-  display: block;
-  margin: 20px auto;
+  width: 400px;          /* Set width as needed */
+  height: 300px;         /* Set height as needed */
+  background-image: url('./assets/images/logo.jpg');
+  background-size: contain;   /* Or: cover, depending on effect */
+  background-repeat: no-repeat;
+  background-position: center;
 }
