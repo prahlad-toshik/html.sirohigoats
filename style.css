@@ -17,7 +17,7 @@ h1{
   width: 400px;          /* Set width as needed */
   height: 300px;         /* Set height as needed */
   background-image: url('./assets/images/logo.jpg');
-  background-size: contain;   /* Or: cover, depending on effect */
+  background-size: contain;   /* ./assets/images/logo.jpg: cover, depending on effect */
   background-repeat: no-repeat;
   background-position: center;
 }
