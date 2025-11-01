@@ -8,6 +8,9 @@ img{
     height: 300px;
     width: 400px;
 }
+body{
+     background-color: #748873;
+}
 
 h1 {
   text-transform: uppercase;
