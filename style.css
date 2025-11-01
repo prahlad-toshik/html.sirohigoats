@@ -4,6 +4,7 @@
     font-family: "Times New Roman", Times, serif;
 }
 img{
+    border: 5px solid white;
     height: 300px;
     width: 400px;
 }
