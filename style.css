@@ -1,5 +1,5 @@
 *{
-    background-color: #748873;
+    background-color: #B7E5CD;
     text-align: center;
     font-family: "Times New Roman", Times, serif;
 }
@@ -31,7 +31,7 @@ h1 {
 }
 
 img{
-  
+
  float: left; 
  margin: 50px;
 }
@@ -44,8 +44,18 @@ h6{
   margin: 50px;
 }
 .navbar{
-  margin: 10px;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
-  gap: 20px;
+  border: 5px solid #F7F1DE ;
 }
+.navbar > *{
+  
+  padding: 10px;
+}
+
+.A{background-color: #305669;}
+.B{background-color: #C1785A;}
+.C{background-color: #8ABEB9;}
+.D{background-color: #305669;;}
+.E{background-color: #C1785A;}
+.F{background-color: #8ABEB9;}
