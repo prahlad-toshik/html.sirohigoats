@@ -49,7 +49,10 @@ h6{
   border: 5px solid #F7F1DE ;
 }
 .navbar > *{
-  
+  text-align: center;
+  text-decoration: solid;
+  text-shadow: #050200;
+  color: white;
   padding: 10px;
 }
 
