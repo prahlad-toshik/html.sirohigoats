@@ -24,4 +24,21 @@ h1 {
   height: 300px;
   width: 400px;
 }
+.ation-img {
+  border: 5px solid white;
+  height: 200px;
+  width: 200px;
+}
 
+img{
+ float: left; 
+ margin: 50px;
+}
+hr{
+  clear: both;
+}
+h6{
+  clear: both;
+  padding: 20px;
+  margin: 50px;
+}
