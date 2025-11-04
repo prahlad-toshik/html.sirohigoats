@@ -8,21 +8,40 @@ h1 {
   text-transform: uppercase;
   font-size: 2rem;
 }
+p{
+  color: black;
+}
 
 
 .poster {
-  width: 50%;
-  margin-left: 25%;
-  margin-top: 100px;
   color: white;
   font-family: "Libre Baskerville", serif;
-  text-align: center;
+  margin : 10px;
+
+}
+.pk{
+  display: inline;
+  background-color: #C1785A;
+  margin: 40px;
 }
 
 .motivation-img {
+  float: left;
   border: 5px solid white;
-  height: 300px;
-  width: 400px;
+  height: 200px;
+  width: 200px;
+}
+.motivation-img1 {
+  float: right;
+  border: 5px solid white;
+  height: 200px;
+  width: 200px;
+}
+.motivation-img2 {
+  float: left;
+  border: 5px solid white;
+  height: 200px;
+  width: 200px;
 }
 .ation-img {
   border: 5px solid white;
@@ -30,11 +49,6 @@ h1 {
   width: 200px;
 }
 
-img{
-
- float: left; 
- margin: 50px;
-}
 hr{
   clear: both;
 }
