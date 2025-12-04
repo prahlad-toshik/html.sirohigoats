@@ -1,3 +1,3 @@
-//console.log('hello sirohi goats!');
+console.log('hello sirohi goats!');
 
-alert("hello");
+//alert("hello");
