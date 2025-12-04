@@ -1,0 +1,24 @@
+{
+  "name": "sirohi_web",
+  "version": "1.0.0",
+  "description": "goat farming",
+  "homepage": "https://github.com/prahlad-toshik/html.sirohigoats#readme",
+  "bugs": {
+    "url": "https://github.com/prahlad-toshik/html.sirohigoats/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prahlad-toshik/html.sirohigoats.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "inquirer": "^13.0.2",
+    "qr-image": "^3.2.0"
+  }
+}
