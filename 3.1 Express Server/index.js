@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Booking form submit
   const bookingForm = $("bookingForm");
   if (!bookingForm) {
-    console.error("bookingForm id नहीं मिला (index.html check करें)");
+    alert.error("bookingForm id नहीं मिला (index.html check करें)");
     return;
   }
 
