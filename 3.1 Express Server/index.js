@@ -6,6 +6,7 @@ const DEFAULT_WA_TEXT = "नमस्ते! मुझे शुद्ध सि
 
 function waLink(text) {
   const msg = encodeURIComponent(text);
+  alert(msg);
   return `https://wa.me/91${FARM_PHONE}?text=${msg}`;
 }
 
