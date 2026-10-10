@@ -128,43 +128,295 @@
 
     <!-- Booking -->
     <section id="booking">
-      <div class="section-title">
-        <h2>Booking Form</h2>
-        <p class="sub">फॉर्म भरते ही WhatsApp पर मैसेज तैयार हो जाएगा</p>
-      </div>
+      <style>
+#sirohi-booking {
+    max-width: 750px;
+    margin: 20px auto;
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #e2e8e2;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
 
-      <div class="card form-wrap">
-        <p class="hint note">
-          नोट:- कृपया अनावश्यक WhatsApp चैट न करें, अपनी आवश्यकता स्पष्ट लिखें — आपको भरोसेमंद और सही जानकारी तुरंत दी जाएगी।
+#sirohi-booking *,
+#sirohi-booking *::before,
+#sirohi-booking *::after {
+    box-sizing: border-box;
+}
+
+#sirohi-booking h2 {
+    text-align: center;
+    color: #176b35;
+    font-size: 27px;
+    margin: 0 0 8px;
+}
+
+#sirohi-booking .subtitle {
+    text-align: center;
+    color: #555;
+    margin: 0 0 24px;
+    line-height: 1.6;
+}
+
+#sirohi-booking .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 17px;
+}
+
+#sirohi-booking .field {
+    min-width: 0;
+}
+
+#sirohi-booking .full-width {
+    grid-column: 1 / -1;
+}
+
+#sirohi-booking label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    color: #263626;
+    margin-bottom: 7px;
+}
+
+#sirohi-booking input,
+#sirohi-booking select,
+#sirohi-booking textarea {
+    width: 100%;
+    min-width: 0;
+    padding: 13px;
+    border: 1px solid #cbd5cb;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #222;
+    background: #fff;
+    font-family: inherit;
+}
+
+#sirohi-booking input:focus,
+#sirohi-booking select:focus,
+#sirohi-booking textarea:focus {
+    outline: 2px solid #278346;
+    outline-offset: 1px;
+}
+
+#sirohi-booking textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#sirohi-booking .submit-btn {
+    width: 100%;
+    border: none;
+    border-radius: 9px;
+    background: #168341;
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#sirohi-booking .submit-btn:hover {
+    background: #106531;
+}
+
+#sirohi-booking .note {
+    text-align: center;
+    color: #666;
+    font-size: 13px;
+    line-height: 1.6;
+    margin-top: 12px;
+}
+
+@media (max-width: 600px) {
+    #sirohi-booking {
+        padding: 17px;
+        margin: 10px auto;
+        border-radius: 12px;
+    }
+
+    #sirohi-booking h2 {
+        font-size: 23px;
+    }
+
+    #sirohi-booking .form-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    #sirohi-booking .full-width {
+        grid-column: auto;
+    }
+
+    #sirohi-booking .submit-btn {
+        font-size: 16px;
+        padding: 15px 10px;
+    }
+}
+</style>
+
+<div id="sirohi-booking">
+
+    <h2>🐐 Goat Booking & Inquiry Form</h2>
+
+    <p class="subtitle">
+        Sirohi Goat Farm &amp; Breeding Setup<br>
+        बकरी खरीदने के लिए नीचे अपनी जानकारी भरें।
+    </p>
+
+    <form id="sirohiWhatsAppForm">
+
+        <div class="form-grid">
+
+            <div class="field">
+                <label for="sf_name">Full Name / पूरा नाम *</label>
+                <input type="text" id="sf_name"
+                       name="name" required
+                       autocomplete="name"
+                       placeholder="Enter your name">
+            </div>
+
+            <div class="field">
+                <label for="sf_phone">Mobile Number / मोबाइल नंबर *</label>
+                <input type="tel" id="sf_phone"
+                       name="phone" required
+                       autocomplete="tel"
+                       inputmode="numeric"
+                       pattern="[0-9]{10}"
+                       maxlength="10"
+                       placeholder="10-digit mobile number">
+            </div>
+
+            <div class="field">
+                <label for="sf_location">City / Village / शहर या गांव *</label>
+                <input type="text" id="sf_location"
+                       name="location" required
+                       autocomplete="address-level2"
+                       placeholder="Your city or village">
+            </div>
+
+            <div class="field">
+                <label for="sf_breed">Goat Breed / नस्ल *</label>
+                <select id="sf_breed" name="breed" required>
+                    <option value="">Select breed</option>
+                    <option value="Pure Sirohi">Pure Sirohi / शुद्ध सिरोही</option>
+                    <option value="Sojat">Sojat / सोजत</option>
+                    <option value="Other">Other / अन्य</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="sf_type">Goat Type / बकरी का प्रकार *</label>
+                <select id="sf_type" name="type" required>
+                    <option value="">Select type</option>
+                    <option value="Male Goat / बकरा">Male Goat / बकरा</option>
+                    <option value="Female Goat / बकरी">Female Goat / बकरी</option>
+                    <option value="Breeding Pair / ब्रीडिंग जोड़ी">Breeding Pair / ब्रीडिंग जोड़ी</option>
+                    <option value="Goat Kids / छोटे बच्चे">Goat Kids / छोटे बच्चे</option>
+                    <option value="Bulk Order / थोक खरीद">Bulk Order / थोक खरीद</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="sf_quantity">Required Quantity / संख्या *</label>
+                <input type="number" id="sf_quantity"
+                       name="quantity" required
+                       min="1" max="10000" step="1"
+                       placeholder="e.g. 5">
+            </div>
+
+            <div class="field">
+                <label for="sf_budget">Budget / बजट (₹)</label>
+                <input type="number" id="sf_budget"
+                       name="budget"
+                       min="0" step="1"
+                       placeholder="Your total budget">
+            </div>
+
+            <div class="field">
+                <label for="sf_delivery">Delivery Preference / डिलीवरी</label>
+                <select id="sf_delivery" name="delivery">
+                    <option value="Farm Pickup / फार्म से लेना">Farm Pickup / फार्म से लेना</option>
+                    <option value="Transport Required / ट्रांसपोर्ट चाहिए">Transport Required / ट्रांसपोर्ट चाहिए</option>
+                    <option value="Discuss Later / बाद में तय करेंगे">Discuss Later / बाद में तय करेंगे</option>
+                </select>
+            </div>
+
+            <div class="field full-width">
+                <label for="sf_message">Additional Requirements / अन्य जानकारी</label>
+                <textarea id="sf_message" name="message"
+                    placeholder="Tell us your requirements... अपनी जरूरत लिखें।"></textarea>
+            </div>
+
+        </div>
+
+        <button type="submit" class="submit-btn">
+            Submit &amp; Send Details on WhatsApp
+        </button>
+
+        <p class="note">
+            आपका फॉर्म भरने के बाद WhatsApp खुलेगा।
+            अपनी जानकारी भेजने के लिए WhatsApp में Send दबाएं।
         </p>
 
-        <form id="bookingForm" autocomplete="on">
-          <div class="field half">
-            <label for="name">आपका नाम</label>
-            <input id="name" name="name" type="text" placeholder="उदा. प्रह्लाद कुमार" required />
-          </div>
+    </form>
+</div>
 
-          <div class="field half">
-            <label for="phone">आपका मोबाइल नंबर</label>
-            <input id="phone" name="phone" type="tel" placeholder="उदा. 98XXXXXX12" required />
-          </div>
+<script>
+(function () {
+    const form = document.getElementById("sirohiWhatsAppForm");
 
-          <div class="field third">
-            <label for="breed">Breed</label>
-            <select id="breed" name="breed" required>
-              <option value="Sirohi">Sirohi</option>
-              <option value="Sirohi Cross">Sirohi Cross</option>
-              <option value="Other">Other</option>
-            </select>
-          </div>
+    if (!form) return;
 
-          <div class="field third">
-            <label for="gender">किस प्रकार चाहिए?</label>
-            <select id="gender" name="gender" required>
-              <option value="Male (नर)">Male (नर)</option>
-              <option value="Female (मादा)">Female (मादा)</option>
-              <option value="Pair (जोड़ा)">Pair 
-      </div>
+    form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        if (!form.reportValidity()) return;
+
+        // Replace this with your farm's WhatsApp number.
+        // Use country code 91, without + or spaces.
+        const whatsappNumber = "91XXXXXXXXXX";
+
+        if (!/^91[0-9]{10}$/.test(whatsappNumber)) {
+            alert("Please configure your farm's WhatsApp number in the code.");
+            return;
+        }
+
+        const getValue = function (id) {
+            return document.getElementById(id).value.trim();
+        };
+
+        const message = [
+            "🐐 NEW GOAT BOOKING INQUIRY",
+            "Sirohi Goat Farm & Breeding Setup",
+            "",
+            "Name: " + getValue("sf_name"),
+            "Mobile: " + getValue("sf_phone"),
+            "Location: " + getValue("sf_location"),
+            "Breed: " + getValue("sf_breed"),
+            "Goat Type: " + getValue("sf_type"),
+            "Quantity: " + getValue("sf_quantity"),
+            "Budget: " + (getValue("sf_budget") || "Not specified"),
+            "Delivery: " + getValue("sf_delivery"),
+            "Additional Requirements: " +
+                (getValue("sf_message") || "None")
+        ].join("\n");
+
+        const url =
+            "https://wa.me/" + whatsappNumber +
+            "?text=" + encodeURIComponent(message);
+
+        // Navigate directly to WhatsApp after submission.
+        window.location.href = url;
+    });
+})();
+</script>
     </section>
 
     <!-- Contact -->
